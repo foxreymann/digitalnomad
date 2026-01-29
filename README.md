@@ -13,6 +13,8 @@ This guide covers the essentials to make your Airbnb a top choice for remote wor
 Depth: At least 70cm deep (crucial for eye to screen distance).  
 Width: Minimum 120cm to fit laptop + notes + coffee.  
 
+- Office chair
+
 - Monitor  
 Each nomad will come his own laptop. But talking an external screen on a plane is a huge hassle.  
 Standard screen would be anything 24" with HDMI. Like this [LG](https://canarias.worten.es/productos/monitor-lg-24mr400-24-5ms-full-hd-ips-7926695  

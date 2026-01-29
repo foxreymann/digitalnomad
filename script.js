@@ -1,31 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Modal Logic
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const closeBtn = document.querySelector('.close-modal');
-    const galleryImages = document.querySelectorAll('.image-gallery img');
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("img01");
+    const captionText = document.getElementById("caption");
+    const span = document.getElementsByClassName("close")[0];
 
-    galleryImages.forEach(img => {
+    // Get all images in the gallery
+    const images = document.querySelectorAll('.gallery img');
+
+    images.forEach(img => {
         img.addEventListener('click', () => {
             modal.style.display = "block";
             modalImg.src = img.src;
-            modalImg.alt = img.alt;
+            captionText.innerHTML = img.alt;
         });
     });
 
-    closeBtn.addEventListener('click', () => {
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
         modal.style.display = "none";
-    });
+    }
 
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
+    // Close on click outside the image
+    modal.onclick = function (event) {
+        if (event.target == modal) {
             modal.style.display = "none";
         }
-    });
+    }
 
-    // Escape key to close
+    // Close on Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === "block") {
+        if (e.key === 'Escape') {
             modal.style.display = "none";
         }
     });
